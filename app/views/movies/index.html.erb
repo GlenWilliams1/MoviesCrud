@@ -1,0 +1,19 @@
+<h1 class="display-4">Movies</h1>
+
+<div class="container">
+  <% @movies.each do |movie| %>
+    <div class="card mb-3">
+      <div class="card-body">
+        <%= render movie %>
+        <p class="card-text">
+          <%= link_to "Show this movie", movie, class: "btn btn-primary" %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+<%= link_to "New movie", new_movie_path, class: "btn btn-success" %>
+
+
